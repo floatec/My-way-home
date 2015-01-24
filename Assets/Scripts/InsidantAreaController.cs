@@ -27,7 +27,7 @@ public class InsidantAreaController : MonoBehaviour
 	{
 		if ( other.CompareTag ( "Player" ) )
 		{
-			other.gameObject.GetComponent<Player> ().iac = null;
+			other.gameObject.GetComponent<Player> ().leaveArea();
 		}
 
 	}
@@ -49,6 +49,14 @@ public class InsidantAreaController : MonoBehaviour
 			count += enemy.dangourLevel;
 		}
 		return strongnes >= count;
+	}
+
+	public void runaway ()
+	{
+		foreach ( var enemy in Enemies )
+		{
+			enemy.runaway();
+		}
 	}
 
 }

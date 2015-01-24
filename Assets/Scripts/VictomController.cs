@@ -12,7 +12,8 @@ public class VictomController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (life <= 0) {
-			GetComponent<MeshRenderer>().material.color=Color.gray;		
+			//GetComponent<MeshRenderer>().material.color=Color.gray;		
+			transform.eulerAngles=(new Vector3(90,0,0));
 		}
 	}
 }
