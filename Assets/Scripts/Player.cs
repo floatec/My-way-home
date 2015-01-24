@@ -19,16 +19,21 @@ public class Player : MonoBehaviour
 	{
 		var ray = Camera.main.ScreenPointToRay ( Input.mousePosition );
 		RaycastHit hit;
-		if ( Input.GetMouseButtonUp ( 0 ) && Physics.Raycast ( ray, out hit, 1000, interUnitLayer|terrainLayer ) )
+		if ( Input.GetMouseButtonUp ( 0 ) && Physics.Raycast ( ray, out hit, 1000, interUnitLayer | terrainLayer ) )
 		{
-			if (1<<hit.collider.gameObject.layer == interUnitLayer.value){
-				if (iac.isStronger(this.strongnes)){
+			if ( 1 << hit.collider.gameObject.layer == interUnitLayer.value )
+			{
+				if ( iac.isStronger ( this.strongnes ) )
+				{
 					karma += 50;
-				}else{
-					Application.LoadLevel("EndHospital");
+				}
+				else
+				{
+					Application.LoadLevel ( "EndHospital" );
 				}
 			}
-			if (1<<hit.collider.gameObject.layer == terrainLayer){
+			if ( 1 << hit.collider.gameObject.layer == terrainLayer )
+			{
 				moveTarget = hit.point;
 			}
 		}
@@ -36,6 +41,6 @@ public class Player : MonoBehaviour
 		//transform.position = Vector3.MoveTowards ( transform.position, moveTarget, 10 * Time.deltaTime );
 
 		var agent = GetComponent<NavMeshAgent> ();
-		agent.SetDestination (moveTarget);
+		agent.SetDestination ( moveTarget );
 	}
 }
