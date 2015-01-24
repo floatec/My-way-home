@@ -7,13 +7,13 @@ public class Player : MonoBehaviour
 	public LayerMask interUnitLayer;
 	public LayerMask WatcherLayer;
 	public InsidantAreaController iac;
-	private float strongnes = 1;
 	public float karma;
-	private Vector3 moveTarget;
 	public WatcherController[] watchers;
 
 	public GameObject SpeechbubblePrefab;
 
+	private float strongnes = 1;
+	private Vector3 moveTarget;
 
 	void Start ()
 	{
@@ -67,8 +67,6 @@ public class Player : MonoBehaviour
 				moveTarget = hit.point;
 			}
 		}
-
-		//transform.position = Vector3.MoveTowards ( transform.position, moveTarget, 10 * Time.deltaTime );
 
 		var agent = GetComponent<NavMeshAgent> ();
 		agent.SetDestination ( moveTarget );

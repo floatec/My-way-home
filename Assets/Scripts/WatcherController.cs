@@ -1,16 +1,45 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WatcherController : MonoBehaviour {
+public class WatcherController : MonoBehaviour
+{
+	private bool MoveToAndDestroy;
 
 	private float willhelp;
-	// Use this for initialization
-	void Start () {
-		willhelp = Random.Range (0, 11) / 10;
+	private NavMeshAgent agent;
+
+	void Awake ()
+	{
+		agent = GetComponent<NavMeshAgent> ();
+		willhelp = Random.Range ( 0, 11 ) / 10;
 	}
 
+	void Update ()
+	{
+		if ( MoveToAndDestroy )
+		{
+			if ( !agent.pathPending )
+			{
+				if ( agent.remainingDistance <= agent.stoppingDistance + 1 )
+				{
+					if ( !agent.hasPath )
+					{
+						// Done
+						Destroy ( gameObject );
+					}
+				}
+			}
+		}
+	}
 
-	public bool askForHelp(){
+	public void Wandern ( Vector3 target )
+	{
+		MoveToAndDestroy = true;
+		agent.SetDestination ( target );
+	}
+
+	public bool askForHelp ()
+	{
 		willhelp += .3f;
 		return willhelp >= 1;
 	}
