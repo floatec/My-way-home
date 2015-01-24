@@ -27,7 +27,7 @@ public class InsidantAreaController : MonoBehaviour
 	{
 		if ( other.CompareTag ( "Player" ) )
 		{
-			other.gameObject.GetComponent<Player> ().iac = null;
+			other.gameObject.GetComponent<Player> ().leaveArea();
 		}
 
 	}

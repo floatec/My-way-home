@@ -391,8 +391,12 @@ MonoBehaviour:
   interUnitLayer:
     serializedVersion: 2
     m_Bits: 512
+  WatcherLayer:
+    serializedVersion: 2
+    m_Bits: 1024
   iac: {fileID: 0}
   karma: 0
+  watchers: []
 --- !u!135 &13517766
 SphereCollider:
   m_ObjectHideFlags: 1
