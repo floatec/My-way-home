@@ -7,14 +7,17 @@ public class Player : MonoBehaviour
 
 	private Vector3 moveTarget;
 
+	void Start ()
+	{
+		moveTarget = transform.position;
+	}
+
 	void Update ()
 	{
 		var ray = Camera.main.ScreenPointToRay ( Input.mousePosition );
 		RaycastHit hit;
 		if ( Input.GetMouseButtonUp ( 0 ) && Physics.Raycast ( ray, out hit, 1000, terrainLayer ) )
 		{
-			Debug.Log ( "hit! " + hit.point );
-
 			moveTarget = hit.point;
 		}
 

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class WorldController : MonoBehaviour
 {
+	public CameraController Camera;
 	public GameObject PlayerPrefab;
 
 	void Start ()
@@ -12,5 +13,7 @@ public class WorldController : MonoBehaviour
 
 		var inst = (GameObject)Object.Instantiate ( PlayerPrefab );
 		inst.transform.position = pos;
+
+		Camera.Target = inst.GetComponent<Player> ();
 	}
 }
