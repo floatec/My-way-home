@@ -1,35 +1,40 @@
 fileFormatVersion: 2
-guid: fe53e07fe32054347b25916d5b802dd1
+guid: cd6aa9b25d69e65489fe4e55466b0155
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: 12
-    100002: body
+    100000: body
+    100002: Door
     100004: //RootNode
-    100006: W__rfel
-    100008: W__rfel_1
-    100010: Zylinder_2
-    400000: 12
-    400002: body
+    100006: roof
+    100008: Stair
+    100010: W__rfel_1
+    100012: windows
+    400000: body
+    400002: Door
     400004: //RootNode
-    400006: W__rfel
-    400008: W__rfel_1
-    400010: Zylinder_2
-    2300000: 12
-    2300002: body
-    2300004: W__rfel
-    2300006: W__rfel_1
-    2300008: Zylinder_2
-    3300000: 12
-    3300002: body
-    3300004: W__rfel
-    3300006: W__rfel_1
-    3300008: Zylinder_2
-    4300000: W__rfel_1
-    4300002: W__rfel
-    4300004: 12
-    4300006: Zylinder_2
-    4300008: body
+    400006: roof
+    400008: Stair
+    400010: W__rfel_1
+    400012: windows
+    2300000: body
+    2300002: Door
+    2300004: roof
+    2300006: Stair
+    2300008: W__rfel_1
+    2300010: windows
+    3300000: body
+    3300002: Door
+    3300004: roof
+    3300006: Stair
+    3300008: W__rfel_1
+    3300010: windows
+    4300000: roof
+    4300002: windows
+    4300004: Door
+    4300006: W__rfel_1
+    4300008: Stair
+    4300010: body
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -50,12 +55,12 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00400000019
+    globalScale: .0149999997
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1

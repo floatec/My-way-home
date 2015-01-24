@@ -1,35 +1,54 @@
 fileFormatVersion: 2
-guid: fe53e07fe32054347b25916d5b802dd1
+guid: 1f8bb30069b769d4ea3d2429174678d6
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: 12
-    100002: body
-    100004: //RootNode
-    100006: W__rfel
-    100008: W__rfel_1
-    100010: Zylinder_2
-    400000: 12
-    400002: body
-    400004: //RootNode
-    400006: W__rfel
-    400008: W__rfel_1
-    400010: Zylinder_2
-    2300000: 12
-    2300002: body
-    2300004: W__rfel
-    2300006: W__rfel_1
-    2300008: Zylinder_2
-    3300000: 12
-    3300002: body
-    3300004: W__rfel
-    3300006: W__rfel_1
-    3300008: Zylinder_2
-    4300000: W__rfel_1
-    4300002: W__rfel
-    4300004: 12
-    4300006: Zylinder_2
-    4300008: body
+    100000: Base
+    100002: BLOCKS
+    100004: Box16
+    100006: dach
+    100008: Doors
+    100010: //RootNode
+    100012: left_block
+    100014: right_bloc
+    100016: roof
+    100018: roof_floor
+    100020: Windows
+    400000: Base
+    400002: BLOCKS
+    400004: Box16
+    400006: dach
+    400008: Doors
+    400010: //RootNode
+    400012: left_block
+    400014: right_bloc
+    400016: roof
+    400018: roof_floor
+    400020: Windows
+    2300000: Base
+    2300002: Box16
+    2300004: Doors
+    2300006: left_block
+    2300008: right_bloc
+    2300010: roof
+    2300012: roof_floor
+    2300014: Windows
+    3300000: Base
+    3300002: Box16
+    3300004: Doors
+    3300006: left_block
+    3300008: right_bloc
+    3300010: roof
+    3300012: roof_floor
+    3300014: Windows
+    4300000: Doors
+    4300002: Windows
+    4300004: roof_floor
+    4300006: roof
+    4300008: Box16
+    4300010: left_block
+    4300012: Base
+    4300014: right_bloc
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -50,12 +69,12 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00400000019
+    globalScale: .00999999978
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1
