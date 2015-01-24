@@ -9,6 +9,12 @@ public class WorldController : MonoBehaviour
 
 	private WatcherController[] Peoples;
 
+
+	void Awake ()
+	{
+		Application.LoadLevelAdditive ( "World_UI" );
+	}
+
 	IEnumerator Start ()
 	{
 		var spots = GameObject.FindGameObjectsWithTag ( "PlayerSpawn" );
@@ -18,7 +24,7 @@ public class WorldController : MonoBehaviour
 		inst.transform.position = pos;
 
 		Camera.Target = inst.GetComponent<Player> ();
-
+		WorldUIController.Instance.player = inst.GetComponent<Player> ();
 
 
 		spots = GameObject.FindGameObjectsWithTag ( "UnitSpawn" );
@@ -52,7 +58,7 @@ public class WorldController : MonoBehaviour
 					Peoples[i] = inst.GetComponent<WatcherController> ();
 					Peoples[i].Wandern ( pos );
 				}
-			} 
+			}
 
 			yield return null;
 		}
