@@ -1,28 +1,30 @@
 fileFormatVersion: 2
-guid: 009f647f38bb1b44c8aad1a2d73e5bb5
+guid: 137f24d8fcd97374f9bc66dabde9094c
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: lines
-    100002: pavement
-    100004: street
-    100006: //RootNode
-    400000: lines
-    400002: pavement
-    400004: street
-    400006: //RootNode
-    2300000: lines
-    2300002: pavement
-    2300004: street
-    3300000: lines
-    3300002: pavement
-    3300004: street
-    4300000: street
-    4300002: lines
-    4300004: pavement
-    6400000: lines
-    6400002: pavement
-    6400004: street
+    100000: //RootNode
+    100002: W__rfel
+    100004: W__rfel_1
+    100006: W__rfel_2
+    100008: W__rfel_3
+    400000: //RootNode
+    400002: W__rfel
+    400004: W__rfel_1
+    400006: W__rfel_2
+    400008: W__rfel_3
+    2300000: W__rfel
+    2300002: W__rfel_1
+    2300004: W__rfel_2
+    2300006: W__rfel_3
+    3300000: W__rfel
+    3300002: W__rfel_1
+    3300004: W__rfel_2
+    3300006: W__rfel_3
+    4300000: W__rfel_3
+    4300002: W__rfel_2
+    4300004: W__rfel_1
+    4300006: W__rfel
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -43,9 +45,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: .00850000046
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
@@ -75,6 +77,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   additionalBone: 0
   userData: 

@@ -1,28 +1,48 @@
 fileFormatVersion: 2
-guid: 009f647f38bb1b44c8aad1a2d73e5bb5
+guid: 31baf3362dd8f3341b75f836a44e3a21
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: lines
-    100002: pavement
-    100004: street
-    100006: //RootNode
-    400000: lines
-    400002: pavement
-    400004: street
-    400006: //RootNode
-    2300000: lines
-    2300002: pavement
-    2300004: street
-    3300000: lines
-    3300002: pavement
-    3300004: street
-    4300000: street
-    4300002: lines
-    4300004: pavement
-    6400000: lines
-    6400002: pavement
-    6400004: street
+    100000: Arm__links_
+    100002: Arm__links__Instanz
+    100004: Arm__rechts_
+    100006: Arm__rechts__2
+    100008: K__rper
+    100010: Kopf
+    100012: //RootNode
+    100014: Arm_L
+    100016: Arm_L_2
+    100018: Arm_R
+    100020: Arm_R_2
+    400000: Arm__links_
+    400002: Arm__links__Instanz
+    400004: Arm__rechts_
+    400006: Arm__rechts__2
+    400008: K__rper
+    400010: Kopf
+    400012: //RootNode
+    400014: Arm_L
+    400016: Arm_L_2
+    400018: Arm_R
+    400020: Arm_R_2
+    2300000: Arm__links__Instanz
+    2300002: Arm__rechts_
+    2300004: K__rper
+    2300006: Kopf
+    2300008: Arm_L_2
+    2300010: Arm_R_2
+    3300000: Arm__links__Instanz
+    3300002: Arm__rechts_
+    3300004: K__rper
+    3300006: Kopf
+    3300008: Arm_L_2
+    3300010: Arm_R_2
+    4300000: Arm__rechts_
+    4300002: Arm__links__Instanz
+    4300004: K__rper
+    4300006: Kopf
+    4300008: Arm_L_2
+    4300010: Arm_R_2
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -43,12 +63,12 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: .00100000005
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1
@@ -75,6 +95,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   additionalBone: 0
   userData: 
