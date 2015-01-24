@@ -24,7 +24,7 @@ public class WorldController : MonoBehaviour
 		inst.transform.position = pos;
 
 		Camera.Target = inst.GetComponent<Player> ();
-
+		WorldUIController.Instance.player = inst.GetComponent<Player> ();
 
 
 		spots = GameObject.FindGameObjectsWithTag ( "UnitSpawn" );

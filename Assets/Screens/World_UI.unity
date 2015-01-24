@@ -158,6 +158,7 @@ GameObject:
   - 223: {fileID: 101876405}
   - 114: {fileID: 101876404}
   - 114: {fileID: 101876403}
+  - 114: {fileID: 101876406}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -239,6 +240,20 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &101876406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 101876401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96a795cdc0f0754d8b5d2c281211357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Toolbar: {fileID: 2111597949}
+  CompasArrow: {fileID: 1875476347}
+  ClockText: {fileID: 1183253359}
 --- !u!1 &136776708
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +450,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 272738159}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 101876406}
+        m_MethodName: OnClickCallPolice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &272738159
@@ -601,7 +628,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 506683873}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 101876406}
+        m_MethodName: OnClickHelp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &506683873
@@ -837,7 +876,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 794753865}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 101876406}
+        m_MethodName: OnClickCamera
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &794753865
@@ -1132,6 +1183,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 2111597948}
+  - 225: {fileID: 2111597949}
   m_Layer: 5
   m_Name: Toolbar
   m_TagString: Untagged
@@ -1159,3 +1211,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
+--- !u!225 &2111597949
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2111597947}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
