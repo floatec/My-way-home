@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
 				if ( iac.isStronger ( this.strongnes ) )
 				{
 					karma += 50;
+					iac.runaway();
 				}
 				else
 				{

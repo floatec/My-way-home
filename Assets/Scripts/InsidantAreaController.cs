@@ -51,4 +51,12 @@ public class InsidantAreaController : MonoBehaviour
 		return strongnes >= count;
 	}
 
+	public void runaway ()
+	{
+		foreach ( var enemy in Enemies )
+		{
+			enemy.runaway();
+		}
+	}
+
 }
