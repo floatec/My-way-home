@@ -26,7 +26,7 @@ public class EnemyController : MonoBehaviour {
 				target.life-=takeLife;
 			}
 		}
-		Debug.Log (Vector3.Distance (transform.position, disappire));
+		//Debug.Log (Vector3.Distance (transform.position, disappire));
 		if (Vector3.Distance(transform.position,disappire)<=1) {
 			 gameObject.SetActive (false);
 		}
