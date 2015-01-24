@@ -385,7 +385,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07a39a4e4c674b2bb9bf2b626018b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveToAndDestroy: 0
 --- !u!135 &13571242
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -406,7 +405,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 133360}
   m_Enabled: 1
   m_Radius: .150000006
-  m_Speed: 3.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
