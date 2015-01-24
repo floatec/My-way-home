@@ -126,7 +126,7 @@ GameObject:
   - 54: {fileID: 5490674}
   - 114: {fileID: 11490674}
   - 135: {fileID: 13533584}
-  - 195: {fileID: 19533584}
+  - 195: {fileID: 19578866}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -231,7 +231,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.368431032, y: .270821095, z: -12.9947147}
+  m_LocalPosition: {x: 0, y: 0, z: -12.9947147}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 433580}
@@ -365,7 +365,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!95 &9533584
 Animator:
@@ -411,14 +411,14 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .300000012
   m_Center: {x: 0, y: .300000012, z: 0}
---- !u!195 &19533584
+--- !u!195 &19578866
 NavMeshAgent:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190674}
   m_Enabled: 1
-  m_Radius: .300000012
+  m_Radius: .5
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -428,7 +428,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1
-  m_BaseOffset: .5
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!1001 &100100000
