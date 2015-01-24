@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
 	private Vector3 moveTarget;
 	public WatcherController[] watchers;
 
+	public GameObject SpeechbubblePrefab;
+
+
 	void Start ()
 	{
 		moveTarget = transform.position;
@@ -21,7 +24,7 @@ public class Player : MonoBehaviour
 	{
 		var ray = Camera.main.ScreenPointToRay ( Input.mousePosition );
 		RaycastHit hit;
-		if ( Input.GetMouseButtonUp ( 0 ) && Physics.Raycast ( ray, out hit, 1000, interUnitLayer | terrainLayer|WatcherLayer ) )
+		if ( Input.GetMouseButtonUp ( 0 ) && Physics.Raycast ( ray, out hit, 1000, interUnitLayer | terrainLayer | WatcherLayer ) )
 		{
 			if ( 1 << hit.collider.gameObject.layer == interUnitLayer.value )
 			{
@@ -36,15 +39,27 @@ public class Player : MonoBehaviour
 			}
 			if ( 1 << hit.collider.gameObject.layer == WatcherLayer.value )
 			{
-				if ( hit.collider.gameObject.GetComponent<WatcherController>().askForHelp())
+				GameObject inst;
+
+				if ( hit.collider.gameObject.GetComponent<WatcherController> ().askForHelp () )
 				{
 					karma += 15;
 					strongnes++;
+
+					inst = (GameObject)Object.Instantiate ( SpeechbubblePrefab );
+					inst.transform.SetParent ( hit.collider.transform, false );
+					Destroy ( inst, 5 );
 				}
 				else
 				{
-
+					inst = (GameObject)Object.Instantiate ( SpeechbubblePrefab );
+					inst.transform.SetParent ( hit.collider.transform, false );
+					Destroy ( inst, 5 );
 				}
+
+				inst = (GameObject)Object.Instantiate ( SpeechbubblePrefab );
+				inst.transform.SetParent ( transform, false );
+				Destroy ( inst, 5 );
 			}
 			if ( 1 << hit.collider.gameObject.layer == terrainLayer )
 			{
@@ -57,9 +72,10 @@ public class Player : MonoBehaviour
 		var agent = GetComponent<NavMeshAgent> ();
 		agent.SetDestination ( moveTarget );
 	}
-	public void leaveArea(){
+	public void leaveArea ()
+	{
 		iac = null;
 		strongnes = 1;
 
-		}
+	}
 }
