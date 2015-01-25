@@ -25,7 +25,7 @@ public class WorldController : MonoBehaviour
 
 		var inst = (GameObject)Object.Instantiate ( PlayerPrefab );
 		inst.transform.position = pos;
-		inst.GetComponent<Player> ().world=this;
+		inst.GetComponent<Player> ().world = this;
 		Camera.Target = inst.GetComponent<Player> ();
 		WorldUIController.Instance.player = inst.GetComponent<Player> ();
 
@@ -48,8 +48,7 @@ public class WorldController : MonoBehaviour
 			idx++;
 			if ( idx >= spots.Length ) idx = 0;
 
-			if ( Random.value > 0.5f )
-				yield return new WaitForSeconds ( Random.value * 0.1f );
+			yield return new WaitForSeconds ( Mathf.Max ( 0.1f, Random.value * 0.2f ) );
 		}
 
 		while ( true )
