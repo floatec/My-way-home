@@ -47,7 +47,6 @@ public class WorldUIController : MonoBehaviour
 
 		var angle = CompasArrow.transform.eulerAngles;
 		angle.z = (float)( 180-Math.Atan2 (direction.x, direction.z)* (180.0 / Math.PI));
-		Debug.Log (angle.ToString());
 		CompasArrow.transform.eulerAngles = angle;
 	}
 }
