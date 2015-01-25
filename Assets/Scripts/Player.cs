@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
@@ -24,6 +25,11 @@ public class Player : MonoBehaviour
 
 	void Update ()
 	{
+		bool mouseOverUI = EventSystem.current != null && EventSystem.current.currentSelectedGameObject != null;
+
+		if ( mouseOverUI )
+			return;
+
 		var ray = Camera.main.ScreenPointToRay ( Input.mousePosition );
 		RaycastHit hit;
 
@@ -40,7 +46,7 @@ public class Player : MonoBehaviour
 				if ( iac.isStronger ( this.strongnes ) )
 				{
 					karma += 50;
-					iac.runaway();
+					iac.runaway ();
 				}
 				else
 				{
