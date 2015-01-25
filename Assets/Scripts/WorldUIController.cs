@@ -21,7 +21,7 @@ public class WorldUIController : MonoBehaviour
 
 	public void OnClickHelp ()
 	{
-
+		player.CallHelp ();
 	}
 	public void OnClickCallPolice ()
 	{
