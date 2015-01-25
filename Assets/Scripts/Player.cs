@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
 	private float strongnes = 1;
 	private Vector3 moveTarget;
 	private NavMeshAgent agent;
+	private float clickCooldown =0;
 	
 	void Start ()
 	{
@@ -38,31 +39,27 @@ public class Player : MonoBehaviour
 		var ray = Camera.main.ScreenPointToRay ( Input.mousePosition );
 		RaycastHit hit;
 		
-		if ( Input.GetMouseButton ( 0 ) && Physics.Raycast ( ray, out hit, 1000, terrainLayer ) )
-		{
-			if ( 1 << hit.collider.gameObject.layer == terrainLayer )
-			{
-				moveTarget = hit.point;
-			}
-		}
-		if ( Input.GetMouseButtonUp ( 0 ) && Physics.Raycast ( ray, out hit, 1000, interUnitLayer | WatcherLayer ) )
-		{
-			if ( 1 << hit.collider.gameObject.layer == interUnitLayer.value )
-			{
-				if ( iac.isStronger ( this.strongnes ) )
-				{
-					karma += 50;
-					iac.runaway ();
+
+		if (Physics.Raycast (ray, out hit, 1000, interUnitLayer | WatcherLayer)) {
+			if(Input.GetMouseButtonUp (0)){
+				if (1 << hit.collider.gameObject.layer == interUnitLayer.value) {
+						if (iac.isStronger (this.strongnes)) {
+								karma += 50;
+								iac.runaway ();
+						} else {
+								Application.LoadLevel ("EndHospital");
+						}
 				}
-				else
-				{
-					Application.LoadLevel ( "EndHospital" );
+				if (1 << hit.collider.gameObject.layer == WatcherLayer.value&&clickCooldown>0) {
+						AskForHelp (hit.collider.gameObject.GetComponent<WatcherController> (), 0.3f);
+					clickCooldown=-2;
+				}
+				if (1 << hit.collider.gameObject.layer == terrainLayer) {
+						moveTarget = hit.point;
 				}
 			}
-			if ( 1 << hit.collider.gameObject.layer == WatcherLayer.value )
-			{
-				AskForHelp ( hit.collider.gameObject.GetComponent<WatcherController> (), 0.3f );
-			}
+		} else if ( Input.GetMouseButton ( 0 ) && Physics.Raycast ( ray, out hit, 1000, terrainLayer ) )
+		{
 			if ( 1 << hit.collider.gameObject.layer == terrainLayer )
 			{
 				moveTarget = hit.point;
@@ -72,6 +69,7 @@ public class Player : MonoBehaviour
 		Vector3 pos = glowIndicator.transform.position;
 		pos.y = iac!=null && !iac.isStronger (this.strongnes) ? 0.1f : -1;
 		glowIndicator.transform.position = pos;
+		clickCooldown += Time.deltaTime;
 	}
 	
 	private void AskForHelp ( WatcherController ctrl, float strength )

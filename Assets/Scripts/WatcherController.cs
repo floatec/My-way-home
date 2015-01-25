@@ -7,7 +7,8 @@ public class WatcherController : MonoBehaviour
 
 	private float willhelp;
 	private NavMeshAgent agent;
-
+	private float cooldown=0;
+	private bool stoped=false;
 	void Awake ()
 	{
 		agent = GetComponent<NavMeshAgent> ();
@@ -30,6 +31,18 @@ public class WatcherController : MonoBehaviour
 				}
 			}
 		}
+		cooldown += Time.deltaTime;
+
+		if (willhelp >= 1 || cooldown <= 0) {
+			agent.Stop ();
+			stoped=true;
+		} else {
+			if(stoped){
+				agent.Resume();	
+				stoped=false;
+			}
+		}
+
 	}
 
 	public void Wandern ( Vector3 target )
@@ -41,6 +54,7 @@ public class WatcherController : MonoBehaviour
 	public bool askForHelp ( float strength )
 	{
 		willhelp += strength;
+		cooldown = -3;
 		return willhelp >= 1;
 	}
 }

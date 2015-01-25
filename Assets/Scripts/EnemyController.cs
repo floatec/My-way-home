@@ -30,6 +30,10 @@ public class EnemyController : MonoBehaviour {
 		if (Vector3.Distance(transform.position,disappire)<=1) {
 			 gameObject.SetActive (false);
 		}
+		if (isActive&&target.life<=0) {
+			isActive=false;
+			runaway();
+		}
 	}
 
 	public void runaway(){

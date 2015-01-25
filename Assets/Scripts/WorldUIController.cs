@@ -13,6 +13,7 @@ public class WorldUIController : MonoBehaviour
 
 	public Vector3 playerHome { get; set; }
 	public Player player { get; set; }
+	private float cooldown;
 
 	void Awake ()
 	{
@@ -21,11 +22,12 @@ public class WorldUIController : MonoBehaviour
 
 	public void OnClickHelp ()
 	{
-		player.CallHelp ();
+
 	}
 	public void OnClickCallPolice ()
 	{
 		player.callPolice ();
+		cooldown = -1;
 	}
 	public void OnClickCamera ()
 	{
@@ -38,6 +40,8 @@ public class WorldUIController : MonoBehaviour
 		time += TimeSpan.FromSeconds ( Time.time );
 		ClockText.text = time.ToString ( "t" );
 
-		Toolbar.interactable = player != null && player.iac != null;
+		Toolbar.interactable = player != null && player.iac != null && cooldown > 0;
+		cooldown += Time.deltaTime;
+
 	}
 }
