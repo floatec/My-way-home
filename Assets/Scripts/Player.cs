@@ -82,17 +82,21 @@ public class Player : MonoBehaviour
 			strongnes++;
 			
 			inst = (GameObject)Object.Instantiate ( SpeechbubblePrefab );
+			inst.GetComponent<SpeachbubbleController>().text.text="ok, ok, I will help you..";
 			inst.transform.SetParent ( ctrl.transform, false );
+
 			Destroy ( inst, 5 );
 		}
 		else
 		{
 			inst = (GameObject)Object.Instantiate ( SpeechbubblePrefab );
+			inst.GetComponent<SpeachbubbleController>().text.text="who cares for something like that...";
 			inst.transform.SetParent ( ctrl.transform, false );
 			Destroy ( inst, 5 );
 		}
 		
 		inst = (GameObject)Object.Instantiate ( SpeechbubblePrefab );
+		inst.GetComponent<SpeachbubbleController>().text.text="lets help together";
 		inst.transform.SetParent ( transform, false );
 		Destroy ( inst, 5 );
 	}
@@ -119,6 +123,11 @@ public class Player : MonoBehaviour
 	
 	public void callPolice ()
 	{
+		GameObject inst;
+		inst = (GameObject)Object.Instantiate ( SpeechbubblePrefab );
+		inst.GetComponent<SpeachbubbleController>().text.text="hello police? we need your help...";
+		inst.transform.SetParent ( transform, false );
+		Destroy ( inst, 5 );
 		var pol = (GameObject)Object.Instantiate ( PolicePrefab );
 		pol.GetComponent<PoliceController> ().moveTo ( transform.position, this.iac );
 		world.Polices.Add ( pol );
