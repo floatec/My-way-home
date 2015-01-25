@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
 				moveTarget = hit.point;
 			}
 		}
-		if ( Input.GetMouseButtonUp ( 0 ) && Physics.Raycast ( ray, out hit, 1000, interUnitLayer | WatcherLayer ) )
+		if ( iac!=null && Input.GetMouseButtonUp ( 0 ) && Physics.Raycast ( ray, out hit, 1000, interUnitLayer | WatcherLayer ) )
 		{
 			if ( 1 << hit.collider.gameObject.layer == interUnitLayer.value )
 			{
