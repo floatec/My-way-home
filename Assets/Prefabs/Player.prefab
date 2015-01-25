@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &135076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 435076}
+  - 33: {fileID: 3335076}
+  - 136: {fileID: 13635076}
+  - 23: {fileID: 2335076}
+  m_Layer: 0
+  m_Name: Cylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &162716
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +151,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &435076
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135076}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .5, y: 0, z: .5}
+  m_Children: []
+  m_Father: {fileID: 462716}
+  m_RootOrder: 1
 --- !u!4 &462716
 Transform:
   m_ObjectHideFlags: 1
@@ -140,10 +170,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.338999987, y: 0, z: -1.78100002}
+  m_LocalPosition: {x: -.375168324, y: -.0299999993, z: -1.53295374}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 490558}
+  - {fileID: 435076}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &490558
@@ -236,6 +267,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 490566}
   m_RootOrder: 0
+--- !u!23 &2335076
+Renderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135076}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: fdc9b079bace644cf8442f72d5b3b3d3, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &2390558
 Renderer:
   m_ObjectHideFlags: 1
@@ -316,6 +367,13 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!33 &3335076
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135076}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3390558
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -398,6 +456,8 @@ MonoBehaviour:
   karma: 0
   watchers: []
   world: {fileID: 0}
+  glowIndicator: {fileID: 135076}
+  helpCallRange: 10
   SpeechbubblePrefab: {fileID: 168202, guid: 5396a34722930a149a02643f48ab1ec5, type: 2}
   PolicePrefab: {fileID: 191378, guid: 73cd8e639252b49d99e7b586986a37ea, type: 2}
 --- !u!135 &13517766
@@ -411,6 +471,19 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .150000006
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &13635076
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135076}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .5
+  m_Height: 2
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &19514442
 NavMeshAgent:
