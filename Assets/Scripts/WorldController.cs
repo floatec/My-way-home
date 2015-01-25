@@ -7,6 +7,7 @@ public class WorldController : MonoBehaviour
 	public GameObject PlayerPrefab;
 	public GameObject WandererPrefab;
 	public GameObject Home;
+	public Player player;
 
 	private WatcherController[] Peoples;
 	public List<GameObject> Polices;
@@ -24,6 +25,7 @@ public class WorldController : MonoBehaviour
 		var pos = spots[Random.Range ( 0, spots.Length )].transform.position;
 
 		var inst = (GameObject)Object.Instantiate ( PlayerPrefab );
+		player = inst.GetComponent<Player>();
 		inst.transform.position = pos;
 		inst.GetComponent<Player> ().world = this;
 		Camera.Target = inst.GetComponent<Player> ();

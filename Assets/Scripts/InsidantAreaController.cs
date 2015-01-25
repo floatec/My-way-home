@@ -6,10 +6,12 @@ public class InsidantAreaController : MonoBehaviour
 	private bool triggered = false;
 	public VictomController[] Victims;
 	public EnemyController[] Enemies;
-
+	public bool onTheRun =false;
+	public WorldController world;
 
 	void OnTriggerEnter ( Collider other )
 	{
+		Debug.Log ( "entered !!!" );
 		if ( other.CompareTag ( "Player" ) )
 		{
 			if ( !triggered )
@@ -43,6 +45,26 @@ public class InsidantAreaController : MonoBehaviour
 		}
 	}
 
+	public bool policeArived(){
+		bool AllAlive = true;
+		foreach ( var Victim in Victims )
+		{
+			if(Victim.life<=0){
+				AllAlive=false;
+			}
+	
+		}
+		bool condition = !onTheRun && AllAlive && world.player.iac == this;
+			if(condition){
+			Debug.Log("350 karma+");
+				world.player.karma+=350;
+			}
+
+		runaway ();
+		return condition;
+		
+	}
+
 	public bool isStronger ( float strongnes )
 	{
 		float count = 0;
@@ -55,6 +77,7 @@ public class InsidantAreaController : MonoBehaviour
 
 	public void runaway ()
 	{
+		onTheRun = true;
 		foreach ( var enemy in Enemies )
 		{
 			enemy.runaway();

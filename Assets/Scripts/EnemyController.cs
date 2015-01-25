@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour {
 	public float hitSpeed = 2;
 	private float hitTimeout;
 	public float takeLife = 5;
+	public InsidantAreaController iac;
 	private NavMeshAgent agent;
 	private Vector3 disappire=new Vector3(-1111111111111111,-1111111111111111,-1111111111111111);
 	// Use this for initialization
@@ -32,12 +33,14 @@ public class EnemyController : MonoBehaviour {
 		}
 		if (isActive&&target.life<=0) {
 			isActive=false;
+			iac.world.player.karma-=500;
 			runaway();
 		}
 	}
 
 	public void runaway(){
 		isActive = false;
+		iac.onTheRun = true;
 		var spots = GameObject.FindGameObjectsWithTag ( "UnitSpawn" );
 		var pos = spots[Random.Range ( 0, spots.Length )].transform.position;
 
