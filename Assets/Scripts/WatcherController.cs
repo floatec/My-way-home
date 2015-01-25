@@ -23,7 +23,7 @@ public class WatcherController : MonoBehaviour
 		{
 			if ( !agent.pathPending )
 			{
-				if ( agent.remainingDistance <= agent.stoppingDistance + 1 )
+				if ( agent.remainingDistance <= agent.stoppingDistance )
 				{
 					if ( !agent.hasPath )
 					{
@@ -37,14 +37,14 @@ public class WatcherController : MonoBehaviour
 
 		if ( willhelp >= 1 || cooldown <= 0 )
 		{
-			agent.Stop ();
+			if ( agent.enabled ) agent.Stop ();
 			stoped = true;
 		}
 		else
 		{
 			if ( stoped )
 			{
-				agent.Resume ();
+				if ( agent.enabled ) agent.Resume ();
 				stoped = false;
 			}
 		}
