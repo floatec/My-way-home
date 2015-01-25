@@ -18,7 +18,7 @@ public class PoliceController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Vector3.Distance(transform.position,target)<=1) {
-			iac.runaway();
+			iac.policeArived();
 			gameObject.SetActive (false);
 		}
 	}
