@@ -457,6 +457,7 @@ MonoBehaviour:
   watchers: []
   world: {fileID: 0}
   glowIndicator: {fileID: 135076}
+  Home: {fileID: 0}
   helpCallRange: 10
   SpeechbubblePrefab: {fileID: 168202, guid: 5396a34722930a149a02643f48ab1ec5, type: 2}
   PolicePrefab: {fileID: 191378, guid: 73cd8e639252b49d99e7b586986a37ea, type: 2}
@@ -493,17 +494,17 @@ NavMeshAgent:
   m_GameObject: {fileID: 162716}
   m_Enabled: 1
   m_Radius: .140000001
-  m_Speed: 5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 520
+  m_AngularSpeed: 1000
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: .600000024
   m_BaseOffset: 0
-  m_WalkableMask: 5
+  m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!1001 &100100000
 Prefab:

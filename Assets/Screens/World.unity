@@ -30756,7 +30756,7 @@ NavMeshAgent:
   m_Acceleration: 20
   avoidancePriority: 80
   m_AngularSpeed: 400
-  m_StoppingDistance: 2
+  m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -32005,7 +32005,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 956661990}
-  - 95: {fileID: 956661991}
   m_Layer: 0
   m_Name: U-Bahn ausgang_2
   m_TagString: Untagged
@@ -32034,22 +32033,6 @@ Transform:
   - {fileID: 333297787}
   m_Father: {fileID: 1965876391}
   m_RootOrder: 10
---- !u!95 &956661991
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 40d57f774e8a6da44aaa4c18f1bf12ff,
-    type: 3}
-  m_PrefabInternal: {fileID: 2064791689}
-  m_GameObject: {fileID: 956661989}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 40d57f774e8a6da44aaa4c18f1bf12ff, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &956994193
 GameObject:
   m_ObjectHideFlags: 0

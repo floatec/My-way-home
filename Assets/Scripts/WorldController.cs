@@ -49,7 +49,7 @@ public class WorldController : MonoBehaviour
 			if ( idx >= spots.Length ) idx = 0;
 
 			if ( Random.value > 0.5f )
-				yield return new WaitForSeconds ( 0.1f );
+				yield return new WaitForSeconds ( Random.value * 0.1f );
 		}
 
 		while ( true )
