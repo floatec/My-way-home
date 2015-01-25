@@ -10,13 +10,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Screens/EndHospital.unity
   - enabled: 1
-    path: Assets/Screens/EndHouse.unity
-  - enabled: 1
     path: Assets/Screens/EndHouseTV.unity
   - enabled: 1
     path: Assets/Screens/EndWorstCase.unity
-  - enabled: 1
-    path: Assets/Screens/Intruduction.unity
   - enabled: 1
     path: Assets/Screens/World.unity
   - enabled: 1

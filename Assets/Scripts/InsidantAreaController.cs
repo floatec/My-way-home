@@ -11,12 +11,10 @@ public class InsidantAreaController : MonoBehaviour
 
 	void OnTriggerEnter ( Collider other )
 	{
-		Debug.Log ( "entered !!!" );
 		if ( other.CompareTag ( "Player" ) )
 		{
 			if ( !triggered )
 			{
-				Debug.Log ( "fight !!!" );
 				triggered = true;
 				foreach ( var enemy in Enemies )
 				{
@@ -56,7 +54,6 @@ public class InsidantAreaController : MonoBehaviour
 		}
 		bool condition = !onTheRun && AllAlive && world.player.iac == this;
 			if(condition){
-			Debug.Log("350 karma+");
 				world.player.karma+=350;
 			}
 
