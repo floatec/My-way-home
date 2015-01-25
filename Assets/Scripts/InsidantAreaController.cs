@@ -11,6 +11,7 @@ public class InsidantAreaController : MonoBehaviour
 
 	void OnTriggerEnter ( Collider other )
 	{
+		Debug.Log ( "entered !!!" );
 		if ( other.CompareTag ( "Player" ) )
 		{
 			if ( !triggered )

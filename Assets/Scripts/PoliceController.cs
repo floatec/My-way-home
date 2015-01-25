@@ -19,7 +19,8 @@ public class PoliceController : MonoBehaviour {
 	void Update () {
 		if (Vector3.Distance(transform.position,target)<=1) {
 			iac.policeArived();
-			gameObject.SetActive (false);
+			Destroy ( gameObject, 5 );
+			this.enabled=(false);
 		}
 	}
 
