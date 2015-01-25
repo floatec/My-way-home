@@ -1,0 +1,232 @@
+fileFormatVersion: 2
+guid: 95e7b9a7cea42b642a9c1550005f5cdb
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Arm_L
+    100002: Arm_L_2
+    100004: Arm_R
+    100006: Arm_R_2
+    100008: Boole
+    100010: Chair
+    100012: DER_TOTE
+    100014: //RootNode
+    100016: Fensterwand_Fenster
+    100018: K__rper
+    100020: Kamera
+    100022: Kapsel
+    100024: Kopf
+    100026: Mann
+    100028: Mann_Normal_A
+    100030: Raum
+    100032: Ring
+    100034: Strick
+    100036: Stuhl
+    100038: W__rfel
+    100040: W__rfel_2
+    100042: W__rfel_2_2
+    100044: Zylinder
+    100046: Klon
+    100048: W__rfel_3
+    400000: Arm_L
+    400002: Arm_L_2
+    400004: Arm_R
+    400006: Arm_R_2
+    400008: Boole
+    400010: Chair
+    400012: DER_TOTE
+    400014: //RootNode
+    400016: Fensterwand_Fenster
+    400018: K__rper
+    400020: Kamera
+    400022: Kapsel
+    400024: Kopf
+    400026: Mann
+    400028: Mann_Normal_A
+    400030: Raum
+    400032: Ring
+    400034: Strick
+    400036: Stuhl
+    400038: W__rfel
+    400040: W__rfel_2
+    400042: W__rfel_2_2
+    400044: Zylinder
+    400046: Klon
+    400048: W__rfel_3
+    2300000: Arm_L_2
+    2300002: Arm_R_2
+    2300004: Chair
+    2300006: Fensterwand_Fenster
+    2300008: K__rper
+    2300010: Kapsel
+    2300012: Kopf
+    2300014: Mann_Normal_A
+    2300016: Ring
+    2300018: W__rfel
+    2300020: W__rfel_2
+    2300022: W__rfel_2_2
+    2300024: Zylinder
+    2300026: Klon
+    2300028: W__rfel_3
+    3300000: Arm_L_2
+    3300002: Arm_R_2
+    3300004: Chair
+    3300006: Fensterwand_Fenster
+    3300008: K__rper
+    3300010: Kapsel
+    3300012: Kopf
+    3300014: Mann_Normal_A
+    3300016: Ring
+    3300018: W__rfel
+    3300020: W__rfel_2
+    3300022: W__rfel_2_2
+    3300024: Zylinder
+    3300026: Klon
+    3300028: W__rfel_3
+    4300000: Zylinder
+    4300002: Kapsel
+    4300004: Ring
+    4300006: Arm_L_2
+    4300008: Arm_R_2
+    4300010: K__rper
+    4300012: Kopf
+    4300014: Mann_Normal_A
+    4300016: Chair
+    4300018: Fensterwand_Fenster
+    4300020: W__rfel
+    4300022: W__rfel_2
+    4300024: W__rfel_2_2
+    4300026: Klon
+    4300028: W__rfel_3
+    7400000: C4D Animation Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: C4D Animation Take
+      takeName: C4D Animation Take
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: DER_TOTE
+        weight: 1
+      - path: DER_TOTE/Mann
+        weight: 1
+      - path: DER_TOTE/Mann/Arm_L
+        weight: 1
+      - path: DER_TOTE/Mann/Arm_L/Arm_L_2
+        weight: 1
+      - path: DER_TOTE/Mann/Arm_R
+        weight: 1
+      - path: DER_TOTE/Mann/Arm_R/Arm_R_2
+        weight: 1
+      - path: DER_TOTE/Mann/K__rper
+        weight: 1
+      - path: DER_TOTE/Mann/Kopf
+        weight: 1
+      - path: DER_TOTE/Mann/Kopf/Mann_Normal_A
+        weight: 1
+      - path: DER_TOTE/Strick
+        weight: 1
+      - path: DER_TOTE/Strick/Kapsel
+        weight: 1
+      - path: DER_TOTE/Strick/Ring
+        weight: 1
+      - path: DER_TOTE/Strick/Zylinder
+        weight: 1
+      - path: Kamera
+        weight: 1
+      - path: Raum
+        weight: 1
+      - path: Raum/Boole
+        weight: 1
+      - path: Raum/Boole/Fensterwand_Fenster
+        weight: 1
+      - path: Raum/Boole/Klon
+        weight: 1
+      - path: Raum/W__rfel_2
+        weight: 1
+      - path: Raum/W__rfel_2_2
+        weight: 1
+      - path: Raum/W__rfel_3
+        weight: 1
+      - path: Stuhl
+        weight: 1
+      - path: Stuhl/Chair
+        weight: 1
+      - path: W__rfel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
