@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 public class WorldController : MonoBehaviour
 {
 	public CameraController Camera;
@@ -8,7 +8,7 @@ public class WorldController : MonoBehaviour
 	public GameObject WandererPrefab;
 
 	private WatcherController[] Peoples;
-
+	public List<GameObject> Polices;
 
 	void Awake ()
 	{
@@ -22,7 +22,7 @@ public class WorldController : MonoBehaviour
 
 		var inst = (GameObject)Object.Instantiate ( PlayerPrefab );
 		inst.transform.position = pos;
-
+		inst.GetComponent<Player> ().world=this;
 		Camera.Target = inst.GetComponent<Player> ();
 		WorldUIController.Instance.player = inst.GetComponent<Player> ();
 

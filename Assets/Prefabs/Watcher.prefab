@@ -396,7 +396,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .300000012
-  m_Center: {x: 0, y: .5, z: 0}
+  m_Center: {x: 0, y: .300000012, z: 0}
 --- !u!195 &19556356
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -416,7 +416,7 @@ NavMeshAgent:
   m_Height: .649999976
   m_BaseOffset: -.100000001
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
