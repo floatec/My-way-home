@@ -25,7 +25,7 @@ public class WorldUIController : MonoBehaviour
 	}
 	public void OnClickCallPolice ()
 	{
-
+		player.callPolice ();
 	}
 	public void OnClickCamera ()
 	{

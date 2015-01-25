@@ -6,6 +6,8 @@ public class InsidantAreaController : MonoBehaviour
 	private bool triggered = false;
 	public VictomController[] Victims;
 	public EnemyController[] Enemies;
+
+
 	void OnTriggerEnter ( Collider other )
 	{
 		if ( other.CompareTag ( "Player" ) )

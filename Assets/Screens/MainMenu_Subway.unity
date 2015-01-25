@@ -6913,7 +6913,9 @@ MonoBehaviour:
   iac: {fileID: 0}
   karma: 0
   watchers: []
+  world: {fileID: 0}
   SpeechbubblePrefab: {fileID: 168202, guid: 5396a34722930a149a02643f48ab1ec5, type: 2}
+  PolicePrefab: {fileID: 191378, guid: 73cd8e639252b49d99e7b586986a37ea, type: 2}
 --- !u!54 &833790444
 Rigidbody:
   m_ObjectHideFlags: 0
