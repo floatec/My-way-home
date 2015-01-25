@@ -101,6 +101,7 @@ ModelImporter:
     100190: W__rfel_75_9
     100192: W__rfel_8
     100194: W__rfel_9
+    100196: walls
     400000: Gleise
     400002: Group_001
     400004: Group_002
@@ -199,6 +200,7 @@ ModelImporter:
     400190: W__rfel_75_9
     400192: W__rfel_8
     400194: W__rfel_9
+    400196: walls
     2300000: Group_001
     2300002: Group_002
     2300004: Group_003
@@ -294,6 +296,7 @@ ModelImporter:
     2300184: W__rfel_75_9
     2300186: W__rfel_8
     2300188: W__rfel_9
+    2300190: walls
     3300000: Group_001
     3300002: Group_002
     3300004: Group_003
@@ -389,6 +392,7 @@ ModelImporter:
     3300184: W__rfel_75_9
     3300186: W__rfel_8
     3300188: W__rfel_9
+    3300190: walls
     4300000: Schienen
     4300002: W__rfel_11_W__rfel_12
     4300004: W__rfel_11_W__rfel_12_2
@@ -484,6 +488,7 @@ ModelImporter:
     4300184: W__rfel_2
     4300186: W__rfel_1
     4300188: W__rfel
+    4300190: walls
     9500000: //RootNode
   materials:
     importMaterials: 1
