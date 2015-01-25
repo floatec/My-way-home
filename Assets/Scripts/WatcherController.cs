@@ -38,9 +38,9 @@ public class WatcherController : MonoBehaviour
 		agent.SetDestination ( target );
 	}
 
-	public bool askForHelp ()
+	public bool askForHelp ( float strength )
 	{
-		willhelp += .3f;
+		willhelp += strength;
 		return willhelp >= 1;
 	}
 }
