@@ -18,6 +18,8 @@ public class WorldController : MonoBehaviour
 
 	IEnumerator Start ()
 	{
+		var root = new GameObject ( "Watcher root" ).transform;
+
 		var spots = GameObject.FindGameObjectsWithTag ( "PlayerSpawn" );
 		var pos = spots[Random.Range ( 0, spots.Length )].transform.position;
 
