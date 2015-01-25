@@ -29,19 +29,23 @@ public class WorldController : MonoBehaviour
 		WorldUIController.Instance.player = inst.GetComponent<Player> ();
 
 
+		int idx = 0;
 		spots = GameObject.FindGameObjectsWithTag ( "UnitSpawn" );
 
 		Peoples = new WatcherController[100];
 		for ( int i = 0; i < Peoples.Length; i++ )
 		{
-			pos = spots[Random.Range ( 0, spots.Length )].transform.position;
+			pos = spots[idx].transform.position;
 			inst = (GameObject)Object.Instantiate ( WandererPrefab );
-			inst.transform.position = pos;
 			inst.transform.parent = root;
+			inst.transform.position = pos;
 
 			pos = spots[Random.Range ( 0, spots.Length )].transform.position;
 			Peoples[i] = inst.GetComponent<WatcherController> ();
 			Peoples[i].Wandern ( pos );
+
+			idx++;
+			if ( idx >= spots.Length ) idx = 0;
 
 			if ( Random.value > 0.5f )
 				yield return new WaitForSeconds ( 0.1f );
@@ -55,8 +59,8 @@ public class WorldController : MonoBehaviour
 				{
 					pos = spots[Random.Range ( 0, spots.Length )].transform.position;
 					inst = (GameObject)Object.Instantiate ( WandererPrefab );
-					inst.transform.position = pos;
 					inst.transform.parent = root;
+					inst.transform.position = pos;
 
 					pos = spots[Random.Range ( 0, spots.Length )].transform.position;
 					Peoples[i] = inst.GetComponent<WatcherController> ();
