@@ -14016,6 +14016,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11490674, guid: 86b065b584e6944e2b84fd8e7d74e993, type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1140537365}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86b065b584e6944e2b84fd8e7d74e993, type: 2}
   m_RootGameObject: {fileID: 685536233}
@@ -22768,7 +22772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dangourLevel: 2
   canHit: 1
-  target: {fileID: 0}
+  target: {fileID: 1140537365}
   isActive: 0
   hitSpeed: 2
   takeLife: 5
