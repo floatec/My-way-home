@@ -6,6 +6,7 @@ public class WorldController : MonoBehaviour
 	public CameraController Camera;
 	public GameObject PlayerPrefab;
 	public GameObject WandererPrefab;
+	public GameObject Home;
 
 	private WatcherController[] Peoples;
 	public List<GameObject> Polices;
@@ -17,8 +18,6 @@ public class WorldController : MonoBehaviour
 
 	IEnumerator Start ()
 	{
-		var root = new GameObject ( "Watcher root" ).transform;
-
 		var spots = GameObject.FindGameObjectsWithTag ( "PlayerSpawn" );
 		var pos = spots[Random.Range ( 0, spots.Length )].transform.position;
 

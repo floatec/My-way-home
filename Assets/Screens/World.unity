@@ -28244,6 +28244,7 @@ MonoBehaviour:
   Camera: {fileID: 2130673338}
   PlayerPrefab: {fileID: 162716, guid: be8f537b8c4c8684e8d8137c4ddfec36, type: 2}
   WandererPrefab: {fileID: 133360, guid: 076f01c165c1a4646addcca703577fdf, type: 2}
+  Home: {fileID: 684784151}
   Polices: []
 --- !u!4 &853512423
 Transform:

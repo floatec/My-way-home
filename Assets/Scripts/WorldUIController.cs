@@ -14,6 +14,7 @@ public class WorldUIController : MonoBehaviour
 	public Vector3 playerHome { get; set; }
 	public Player player { get; set; }
 	private float cooldown;
+	private Vector3 direction;
 
 	void Awake ()
 	{
@@ -42,6 +43,11 @@ public class WorldUIController : MonoBehaviour
 
 		Toolbar.interactable = player != null && player.iac != null && cooldown > 0;
 		cooldown += Time.deltaTime;
+		direction = player.transform.position - player.world.Home.transform.position;
 
+		var angle = CompasArrow.transform.eulerAngles;
+		angle.z = (float)( 180-Math.Atan2 (direction.x, direction.z)* (180.0 / Math.PI));
+		Debug.Log (angle.ToString());
+		CompasArrow.transform.eulerAngles = angle;
 	}
 }
