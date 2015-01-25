@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
 	public WatcherController[] watchers;
 	public WorldController world;
 	public GameObject glowIndicator;
+	public GameObject Home;
 	
 	public float helpCallRange = 10;
 	
