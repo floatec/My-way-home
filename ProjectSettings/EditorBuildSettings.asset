@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/Screens/World.unity
   - enabled: 1
     path: Assets/Screens/World_UI.unity
+  - enabled: 1
+    path: Assets/Screens/Credits.unity

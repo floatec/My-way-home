@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 public class WorldController : MonoBehaviour
 {
+	public bool Credits = false;
+
 	public CameraController Camera;
 	public GameObject PlayerPrefab;
 	public GameObject WandererPrefab;
@@ -14,7 +16,7 @@ public class WorldController : MonoBehaviour
 
 	void Awake ()
 	{
-		Application.LoadLevelAdditive ( "World_UI" );
+		if ( !Credits ) Application.LoadLevelAdditive ( "World_UI" );
 	}
 
 	IEnumerator Start ()
@@ -25,11 +27,12 @@ public class WorldController : MonoBehaviour
 		var pos = spots[Random.Range ( 0, spots.Length )].transform.position;
 
 		var inst = (GameObject)Object.Instantiate ( PlayerPrefab );
-		player = inst.GetComponent<Player>();
+		player = inst.GetComponent<Player> ();
 		inst.transform.position = pos;
 		inst.GetComponent<Player> ().world = this;
 		Camera.Target = inst.GetComponent<Player> ();
-		WorldUIController.Instance.player = inst.GetComponent<Player> ();
+
+		if ( !Credits ) WorldUIController.Instance.player = inst.GetComponent<Player> ();
 
 
 		int idx = 0;

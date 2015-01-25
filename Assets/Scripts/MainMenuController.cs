@@ -19,7 +19,7 @@ public class MainMenuController : MonoBehaviour
 
 	public void OnClickCredits ()
 	{
-
+		Application.LoadLevel ( "Credits" );
 	}
 
 	public void OnClickExit ()

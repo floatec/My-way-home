@@ -1627,7 +1627,7 @@ Transform:
   m_LocalScale: {x: 3.29999995, y: 3.29999995, z: 3.29999995}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
 --- !u!1 &235951602
 GameObject:
   m_ObjectHideFlags: 0
@@ -14676,7 +14676,7 @@ Transform:
   m_LocalScale: {x: .519999981, y: .376046151, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 27
 --- !u!1001 &1702547509
 Prefab:
   m_ObjectHideFlags: 0
@@ -15980,7 +15980,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 462588725}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1206525104}
+        m_MethodName: OnClickCredits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1852196961
