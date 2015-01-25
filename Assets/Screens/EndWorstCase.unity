@@ -60,7 +60,7 @@ LightmapSettings:
     m_Bounces: 2
     m_FinalGatherRays: 1000
     m_FinalGatherContrastThreshold: .0500000007
-    m_FinalGatherGradientThreshold: .111000001
+    m_FinalGatherGradientThreshold: .690999985
     m_FinalGatherInterpolationPoints: 15
     m_AOAmount: .247999996
     m_AOMaxDistance: .5
