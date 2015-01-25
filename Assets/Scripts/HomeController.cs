@@ -7,8 +7,7 @@ public class HomeController : MonoBehaviour
 	{
 		if ( other.CompareTag ( "Player" ) )
 		{
-			Debug.Log ( "home!" );
-			Application.LoadLevel ( "EndHouse" );
+			Application.LoadLevel ( "EndHouseTV" );
 		}
 	}
 }
